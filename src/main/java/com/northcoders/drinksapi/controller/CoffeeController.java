@@ -1,6 +1,8 @@
 package com.northcoders.drinksapi.controller;
 
 import com.northcoders.drinksapi.model.Coffee;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,4 +23,6 @@ public class CoffeeController {
     public Coffee getCoffee(@RequestParam(value = "name", defaultValue = "Latte") String name) {
         return new Coffee(count.incrementAndGet(), name);
     }
+
+
 }
